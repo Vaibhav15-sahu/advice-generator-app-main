@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+    --bg-color :hsl(218, 23%, 16%);
+    --bg-box : hsl(217, 19%, 24%);
+    --text-cyan: hsl(193, 38%, 86%);
+    --text-green : hsl(150, 100%, 66%); 
+    --line-grayish-blue : hsl(217, 19%, 38%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Manrope', sans-serif;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+.advice-box{
+    /* position: absolute; */
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -55%);
+    width: 330px;
+    border-radius: 20px;
+    background-color: var(--bg-box);
+}
+
+.advice-box .advice-id{
+    font-size: 12px;
+    margin-top: 40px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: var(--text-green);
+}
+
+.advice-box .advice{
+    font-size: 26px;
+    color: var(--text-cyan);
+    text-align: center;
+    margin: 20px 50px;
+    font-weight: 800;
+}
+
+.advice-box .line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+.line-2{
+    display: none;
+}
+
+.advice-box .dice{
+    position: relative;
+    top: 35px;
+    left: 134px ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    aspect-ratio: 1;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--text-green);
+}
+    
+.advice-box button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 40px 0px var(--text-green);
+    animation-name: tst;
+    animation-duration: 0.5s;
+}
+
+@keyframes tst {
+    from{
+        box-shadow: 0px 0px 00px 0px var(--text-green);
+    }
+    end{
+        box-shadow: 0px 0px 40px 0px var(--text-green);
+    }
+}
+
+
+@media only screen and (min-width: 800px) {
+    .advice-box{
+        width: 45rem;
+    }
+    .advice{
+        font-size: 28px;
+    }
+
+    .advice-box .line-1{
+        display: none;
+    }
+    .advice-box .line-2{
+        display: block;
+    }
+    
+    .advice-box .dice{
+        left : 320px;
+    }
+}
